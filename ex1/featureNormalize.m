@@ -26,13 +26,13 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+mu = sum(X, 1) / size(X, 1);
 
+% also can use 'std' function: std(X .- mu)
+% here is to find the mean of the sample, so we need to divided it by n - 1
+sigma = sqrt(sum((X .- mu) .^ 2) / (size(X, 1) - 1));
 
-
-
-
-
-
+X_norm = (X .- mu) ./ sigma;
 
 % ============================================================
 
