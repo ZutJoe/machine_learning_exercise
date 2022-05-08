@@ -13,8 +13,20 @@ figure; hold on;
 %
 
 
+pos = find(y==1);
+neg = find(y==0);
 
+plot(X(pos, 1), X(pos, 2), 'k+', 'LineWidth', 2, 'MarkerSize', 5);
+plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', 'MarkerSize', 5);
 
+% this also can implementation
+##for i=1:length(y),
+##    if y(i) != 0,
+##        plot(X(i, 1), X(i, 2), 'k+');
+##    else,
+##        plot(X(i, 1), X(i, 2), 'ko');
+##    end
+##end
 
 
 
