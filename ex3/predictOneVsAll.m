@@ -31,9 +31,13 @@ X = [ones(m, 1) X];
 %       
 
 
+##t = X * all_theta';
+##for i = 1: m
+##    [num, index] = max(sigmoid(t(i, :)), [], 2);
+##    p(i) = index;
 
-
-
+C = sigmoid(X * all_theta');
+[M, p] = max(C, [], 2);
 
 
 % =========================================================================
